@@ -33,20 +33,36 @@ Part of the [Mission Engadi](https://engadi.org) microservices architecture.
 
 ## 🎯 Overview
 
-The Gateway Service is a FastAPI-based microservice that handles [describe main functionality]. It's part of the Mission Engadi platform, which aims to [mission statement].
+The Gateway Service is the central entry point for all Mission Engadi microservices. It provides intelligent request routing, rate limiting, authentication, health monitoring, and API aggregation. Built with FastAPI, it offers high performance with async/await support and comprehensive observability features.
+
+**Key Responsibilities:**
+- **Unified API Entry**: Single point of access for all microservices
+- **Request Routing**: Intelligent routing based on path patterns
+- **Rate Limiting**: Configurable rate limiting per endpoint
+- **Health Monitoring**: Service health checks and circuit breaker patterns
+- **Security**: Authentication, authorization, and request validation
+- **Logging**: Comprehensive request/response logging and audit trails
 
 ## ✨ Features
 
+### Gateway Capabilities
+- **Dynamic Routing**: Path-based routing with wildcard support
+- **Service Discovery**: Dynamic service registration and health monitoring
+- **Rate Limiting**: Configurable rate limits per endpoint/client
+- **Circuit Breaker**: Automatic failure detection and recovery
+- **Request Proxying**: Efficient HTTP request forwarding
+- **Authentication**: JWT-based authentication with role-based access control
+
+### Technical Features
 - **RESTful API**: Clean, versioned API with automatic OpenAPI documentation
 - **Async/Await**: Fully asynchronous for high performance
 - **Database**: PostgreSQL with SQLAlchemy ORM and async support
-- **Authentication**: JWT-based authentication with role-based access control
 - **Validation**: Request/response validation using Pydantic
-- **Testing**: Comprehensive test suite with pytest
+- **Testing**: Comprehensive test suite with 70%+ coverage
 - **Docker**: Containerized application with docker-compose
 - **CI/CD**: Automated testing and deployment with GitHub Actions
-- **Monitoring**: Health checks and readiness probes
-- **Logging**: Structured logging with contextual information
+- **Monitoring**: Health checks, readiness probes, and detailed logging
+- **Logging**: Structured logging with request/response tracking
 
 ## 🏗️ Architecture
 
